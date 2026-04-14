@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafidz Maulana Yusuf | Executive Branding Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mu-red: #8B0000; 
+            --mu-gold: #D4AF37; 
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-luxury { font-family: 'Cinzel', serif; }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(139, 0, 0, 0.08);
+            border-color: var(--mu-gold);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+        }
+
+        /* Gold Shine Button */
+        .btn-luxury {
+            background: linear-gradient(135deg, var(--mu-red) 0%, #4a0000 100%);
+            border: 1px solid var(--mu-gold);
+            letter-spacing: 2px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .btn-luxury:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+            transform: scale(1.05);
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .profile-glow {
+            position: relative;
+        }
+
+        .profile-glow::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            background: linear-gradient(45deg, var(--mu-gold), transparent, var(--mu-red));
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <nav class="flex justify-between items-center px-12 py-8 max-w-7xl mx-auto">
+        <div class="font-luxury text-2xl tracking-widest text-white border-b-2 border-mu-gold">HMY.</div>
+        <div class="space-x-10 text-xs font-bold uppercase tracking-[0.3em] hidden md:flex text-gray-400">
+            <a href="#" class="hover:text-mu-gold transition">Identity</a>
+            <a href="#" class="hover:text-mu-gold transition">Branding</a>
+            <a href="#" class="hover:text-mu-gold transition">Portofolio</a>
+        </div>
+    </nav>
+
+    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-10 py-12 max-w-7xl mx-auto min-h-[75vh]">
+        <div class="md:w-3/5 space-y-6">
+            <h4 class="text-mu-gold font-bold tracking-[0.5em] text-xs uppercase italic">The Theatre of Digital Dreams</h4>
+            <h1 class="text-6xl md:text-8xl font-black leading-tight">
+                Hafidz <br> <span class="gold-text uppercase font-luxury text-5xl md:text-7xl">Maulana Yusuf</span>
+            </h1>
+            <p class="text-gray-400 font-light tracking-wide max-w-lg leading-loose">
+                Membangun identitas digital yang prestisius dan tak tertandingi. Menggabungkan strategi <span class="text-white font-bold">Manchester United</span> ke dalam <span class="text-mu-gold uppercase font-bold">Personal Branding</span> untuk menciptakan impresi profesional yang abadi.
+            </p>
+
+            <div class="flex items-center space-x-8 pt-6">
+                <a href="https://www.canva.com/design/DAHGy11IbxA?ui=eyJLIjp7IkEiOiIwMzM3ZDMwZC0xYzI2LTRkMTgtODMyMC05MzA2NDU0YmQwOWUifX0" 
+                   target="_blank" 
+                   class="btn-luxury px-12 py-5 text-white font-bold text-xs uppercase tracking-widest rounded-sm">
+                    View Executive Personal Branding
+                </a>
+                
+                <div class="flex space-x-6 text-gray-500">
+                    <a href="#" class="hover:text-mu-gold transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-mu-gold transition">
