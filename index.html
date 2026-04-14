@@ -6,9 +6,9 @@
     <title>Hafidz Maulana Yusuf | Executive Branding Portfolio</title>
     
     <!-- Framework & Fonts -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link href="https://googleapis.com" rel="stylesheet">
     
     <!-- Library Animasi -->
     <link href="https://unpkg.com" rel="stylesheet">
@@ -22,12 +22,13 @@
             --gold-gradient: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
         }
 
+        * { scroll-behavior: smooth; }
+
         body {
             background-color: var(--dark-bg);
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
 
         .font-luxury { font-family: 'Cinzel', serif; }
@@ -47,17 +48,17 @@
 
         /* Glassmorphism Card */
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-card:hover {
             border-color: var(--mu-gold);
-            background: rgba(139, 0, 0, 0.1);
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            background: rgba(139, 0, 0, 0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
         }
 
         /* Luxury Button */
@@ -79,34 +80,28 @@
             z-index: -1;
         }
 
-        .btn-luxury:hover::before {
-            left: 100%;
-        }
+        .btn-luxury:hover::before { left: 100%; }
 
-        /* Portfolio Image Hover */
+        /* Portfolio Styling */
         .portfolio-item {
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .portfolio-item img {
-            transition: transform 0.8s ease;
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.1) rotate(2deg);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         .item-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, transparent 100%);
             opacity: 0;
             transition: 0.5s;
         }
 
-        .portfolio-item:hover .item-overlay {
-            opacity: 1;
+        .portfolio-item:hover .item-overlay { opacity: 1; }
+        
+        .portfolio-item img {
+            transition: transform 1.5s cubic-bezier(0, 0, 0.2, 1);
         }
+        
+        .portfolio-item:hover img { transform: scale(1.1); }
     </style>
 </head>
 <body>
@@ -114,97 +109,116 @@
     <div class="bg-pattern"></div>
 
     <!-- NAVIGATION -->
-    <nav class="flex justify-between items-center px-8 md:px-12 py-8 max-w-7xl mx-auto sticky top-0 z-50 bg-black/50 backdrop-blur-md">
+    <nav class="flex justify-between items-center px-8 md:px-12 py-8 max-w-7xl mx-auto sticky top-0 z-50 bg-black/40 backdrop-blur-lg">
         <div class="font-luxury text-2xl tracking-[0.3em] gold-text border-b border-mu-gold">HMY.</div>
-        <div class="space-x-10 text-[10px] font-bold uppercase tracking-[0.4em] hidden md:flex text-gray-300">
-            Identity</a>
-            <a href="#branding" class="hover:text-mu-gold transition duration-300">Branding</a>
-            <a href="#portfolio" class="hover:text-mu-gold transition duration-300">Portfolio</a>
+        <div class="space-x-10 text-[10px] font-bold uppercase tracking-[0.4em] hidden md:flex text-gray-400">
+            <a href="#hero" class="hover:text-mu-gold transition">Identity</a>
+            <a href="#legacy" class="hover:text-mu-gold transition">Legacy</a>
+            <a href="#portfolio" class="hover:text-mu-gold transition">Portfolio</a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="flex flex-col-reverse md:flex-row items-center justify-between px-10 py-20 max-w-7xl mx-auto min-h-[80vh]">
+    <section id="hero" class="flex flex-col-reverse md:flex-row items-center justify-between px-10 py-16 max-w-7xl mx-auto min-h-[85vh]">
         <div class="md:w-3/5 space-y-8" data-aos="fade-right">
-            <h4 class="text-mu-gold font-bold tracking-[0.6em] text-xs uppercase italic animate-pulse">The Theatre of Digital Dreams</h4>
-            <h1 id="hero-title" class="text-6xl md:text-8xl font-black leading-none">
+            <h4 class="text-mu-gold font-bold tracking-[0.6em] text-[10px] uppercase italic">The Theatre of Digital Dreams</h4>
+            <h1 id="hero-title" class="text-6xl md:text-8xl font-black leading-[0.9]">
                 HAFIDZ <br> <span class="gold-text font-luxury text-5xl md:text-7xl">MAULANA YUSUF</span>
             </h1>
-            <p class="text-gray-400 font-light tracking-wide max-w-lg leading-relaxed text-sm md:text-base">
-                Membangun identitas digital yang prestisius. Mengadopsi mentalitas juara <span class="text-white font-bold border-b border-mu-red">Manchester United</span> ke dalam <span class="text-mu-gold font-bold">Personal Branding</span> eksekutif.
+            <p class="text-gray-400 font-light tracking-wide max-w-lg leading-relaxed text-sm">
+                Membangun identitas digital yang prestisius. Mengadopsi mentalitas <span class="text-white font-bold">Manchester United</span> ke dalam <span class="text-mu-gold font-bold uppercase">Executive Branding</span> untuk impresi yang tak tertandingi.
             </p>
 
-            <div class="flex flex-wrap gap-6 pt-6">
-                <a href="https://www.canva.com/design/..." target="_blank" class="btn-luxury px-10 py-4 text-white font-bold text-[10px] uppercase tracking-[0.2em] rounded-sm shadow-lg">
-                    View Portfolio
+            <div class="flex flex-wrap gap-6 pt-4">
+                <a href="https://canva.com?..." target="_blank" 
+                   class="btn-luxury px-10 py-4 text-white font-bold text-[10px] uppercase tracking-[0.2em] rounded-sm">
+                    Explore Branding
                 </a>
                 <div class="flex items-center space-x-6 text-gray-500">
-                    <a href="#" class="hover:text-mu-gold transform hover:scale-125 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="hover:text-mu-gold transform hover:scale-125 transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-mu-gold transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-mu-gold transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
                 </div>
             </div>
         </div>
         
         <div class="md:w-2/5 mb-12 md:mb-0 relative" data-aos="zoom-in">
-            <div class="w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-mu-gold/30 relative z-10">
-                <img src="https://placeholder.com" alt="Profile" class="w-full h-full object-cover">
+            <div class="w-72 h-72 md:w-96 md:h-96 mx-auto rounded-full overflow-hidden border-2 border-mu-gold/20 relative z-10 p-2">
+                <div class="w-full h-full rounded-full overflow-hidden border border-mu-gold/50">
+                    <!-- Ganti dengan foto profil asli -->
+                    <img src="https://unsplash.com" class="w-full h-full object-cover">
+                </div>
             </div>
-            <div class="absolute inset-0 bg-mu-red/20 blur-[100px] rounded-full"></div>
+            <div class="absolute inset-0 bg-mu-red/10 blur-[120px] rounded-full"></div>
         </div>
     </section>
 
-    <!-- IDENTITY SECTION -->
-    
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="gold-text font-luxury text-4xl mb-4">The Legacy</h2>
-            <div class="h-1 w-20 bg-mu-red mx-auto"></div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-mu-gold font-bold tracking-widest mb-4 uppercase">Visi Strategis</h3>
-                <p class="text-gray-400 leading-loose">Menjadi pionir dalam transformasi digital yang elegan, memadukan estetika kelas atas dengan fungsionalitas tanpa batas.</p>
+    <!-- IDENTITY / LEGACY SECTION -->
+    <section id="legacy" class="py-32 px-10 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-12 items-center">
+            <div class="md:col-span-1" data-aos="fade-up">
+                <h2 class="gold-text font-luxury text-4xl mb-6">THE LEGACY</h2>
+                <p class="text-gray-500 text-sm leading-loose">
+                    Hafidz Maulana Yusuf adalah perpaduan presisi teknis dan visi strategis. Membangun fondasi di atas dedikasi kelas dunia.
+                </p>
             </div>
-            <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-mu-gold font-bold tracking-widest mb-4 uppercase">Misi Eksekutif</h3>
-                <p class="text-gray-400 leading-loose">Menerapkan strategi branding kelas dunia untuk menciptakan solusi digital yang abadi dan memberikan impak nyata bagi audiens.</p>
+            
+            <div class="md:col-span-2 grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-gem text-mu-gold mb-6 text-2xl"></i>
+                    <h3 class="text-white font-bold tracking-widest mb-4 uppercase text-sm">Visi Strategis</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Menjadi pionir dalam transformasi digital yang elegan, memadukan estetika premium dengan fungsionalitas tanpa batas.</p>
+                </div>
+                <div class="glass-card p-10" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-crown text-mu-red mb-6 text-2xl"></i>
+                    <h3 class="text-white font-bold tracking-widest mb-4 uppercase text-sm">Misi Eksekutif</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Menerapkan standar branding kelas dunia untuk solusi digital yang abadi dan memberikan impak nyata bagi audiens.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" class="py-24 bg-black/40">
+    <!-- SELECTED WORKS (PORTFOLIO) -->
+    <section id="portfolio" class="py-32 bg-black/40">
         <div class="max-w-7xl mx-auto px-10">
-            <div class="flex justify-between items-end mb-12" data-aos="fade-right">
-                <div>
-                    <h2 class="gold-text font-luxury text-4xl">Selected Works</h2>
-                    <p class="text-gray-500 mt-2 italic text-sm">Prestasi & Proyek Strategis</p>
-                </div>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="gold-text font-luxury text-5xl mb-4">SELECTED WORKS</h2>
+                <div class="h-[1px] w-40 bg-gradient-to-r from-transparent via-mu-gold to-transparent mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Item 1 -->
-                <div class="portfolio-item group h-96" data-aos="flip-left">
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Item 1: Digital Branding -->
+                <div class="portfolio-item group h-[500px]" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-8">
-                        <h4 class="text-mu-gold font-bold text-xl">Digital Branding</h4>
-                        <p class="text-xs text-gray-300 mt-2">Executive Strategy for Tech Corp</p>
+                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-10">
+                        <span class="text-mu-gold text-[10px] tracking-[0.4em] font-bold uppercase mb-2">Identity</span>
+                        <h4 class="text-white font-bold text-2xl">Digital Branding</h4>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700">
+                            Transformasi identitas visual untuk korporasi skala besar dengan sentuhan elegan dan modern.
+                        </p>
                     </div>
                 </div>
-                <!-- Item 2 -->
-                <div class="portfolio-item group h-96" data-aos="flip-left" data-aos-delay="100">
+
+                <!-- Item 2: Red Devil Analytics -->
+                <div class="portfolio-item group h-[500px]" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-8">
-                        <h4 class="text-mu-gold font-bold text-xl">Red Devils Analytics</h4>
-                        <p class="text-xs text-gray-300 mt-2">Data-Driven Performance System</p>
+                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-10">
+                        <span class="text-mu-red text-[10px] tracking-[0.4em] font-bold uppercase mb-2">Analysis</span>
+                        <h4 class="text-white font-bold text-2xl">Red Devil Analytics</h4>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700">
+                            Dashboard manajemen data tingkat lanjut yang mengadopsi presisi taktis dalam pengambilan keputusan.
+                        </p>
                     </div>
                 </div>
-                <!-- Item 3 -->
-                <div class="portfolio-item group h-96" data-aos="flip-left" data-aos-delay="200">
+
+                <!-- Item 3: Legacy Project -->
+                <div class="portfolio-item group h-[500px]" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://unsplash.com" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
-                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-8">
-                        <h4 class="text-mu-gold font-bold text-xl">Legacy Project</h4>
-                        <p class="text-xs text-gray-300 mt-2">Corporate Identity Revamp</p>
+                    <div class="item-overlay absolute inset-0 flex flex-col justify-end p-10">
+                        <span class="text-mu-gold text-[10px] tracking-[0.4em] font-bold uppercase mb-2">Legacy</span>
+                        <h4 class="text-white font-bold text-2xl">Legacy Project</h4>
+                        <p class="text-gray-400 text-xs mt-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-700">
+                            Membangun jejak digital yang tak terhapuskan melalui integrasi desain klasik dan teknologi masa depan.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -212,10 +226,15 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-white/10 text-center">
-        <p class="text-[10px] tracking-[0.5em] text-gray-600 uppercase">
-            © 2024 Hafidz Maulana Yusuf • Built for Excellence
-        </p>
+    <footer class="py-20 border-t border-white/5 text-center bg-black">
+        <div class="font-luxury text-xl gold-text mb-6">HMY.</div>
+        <p class="text-[9px] tracking-[0.6em] text-gray-600 uppercase mb-8">Developed for Executive Impression</p>
+        <div class="flex justify-center space-x-8 text-gray-500 mb-10">
+            <a href="#" class="hover:text-mu-gold transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-mu-gold transition"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-mu-gold transition"><i class="fab fa-behance"></i></a>
+        </div>
+        <p class="text-[10px] text-gray-700">© 2024 HAFIDZ MAULANA YUSUF. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <!-- Scripts -->
@@ -223,18 +242,18 @@
     <script>
         // Inisialisasi AOS
         AOS.init({
-            duration: 1000,
+            duration: 1200,
             once: true,
-            offset: 100
+            offset: 150
         });
 
         // Animasi Teks Hero dengan GSAP
         gsap.from("#hero-title", {
-            duration: 1.5,
+            duration: 2,
             opacity: 0,
-            y: 50,
+            y: 70,
             ease: "power4.out",
-            delay: 0.5
+            delay: 0.3
         });
     </script>
 </body>
